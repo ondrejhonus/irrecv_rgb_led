@@ -1,5 +1,5 @@
 #include <Arduino.h>
-
+#define IR_USE_AVR_TIMER 1
 #include <IRremote.hpp>
 
 #define IR_MODULE_PIN 12 // This is the port your connect your IR reciever OUTPUT
@@ -105,7 +105,7 @@ void loop() {
             default:
                 break;
         }
-        delay(200);
+        delay(100);
         IrReceiver.resume();
     }
 }
