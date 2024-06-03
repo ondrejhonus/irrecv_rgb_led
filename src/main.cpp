@@ -82,7 +82,11 @@ void display_number(unsigned long code) {
 void loop() {
     if (IrReceiver.decode()) {
         unsigned long recieved_code = IrReceiver.decodedIRData.decodedRawData;
+        Serial.print("Number: ");
         display_number(recieved_code);
+        Serial.println("");
+        Serial.print("Code: ");
+        Serial.println(recieved_code);
         switch (recieved_code) {
             case BTN_RED:
                 set_color(0);
