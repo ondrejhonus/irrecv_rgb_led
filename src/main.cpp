@@ -1,13 +1,13 @@
 #include <Arduino.h>
 #include <IRremote.hpp>
 
-#define IR_MODULE_PIN 12
-#define BTN_RED 19365
-#define BTN_GREEN 19366
-#define BTN_BLUE 19364
-#define RESET 149
+#define IR_MODULE_PIN 12 // This is the port your connect your IR reciever OUTPUT
+#define BTN_RED 19365 // Get the raw code from your controller and set your own code for the red button
+#define BTN_GREEN 19366 // Do the same thing as the red button, but for the green button
+#define BTN_BLUE 19364 // -||-
+#define RESET 149 // Set your code for a reset button on your controller
 
-int rgbs[] = {6, 5, 3};  // R3, G5, B6
+int rgbs[] = {6, 5, 3};  // Red D3, Green D5, Blue D6
 const int count = 3;
 int values[count];
 
